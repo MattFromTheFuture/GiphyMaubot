@@ -20,3 +20,9 @@ Also, `!giphy`, `!g` and `!klipy` may be used.
 
 ### Notes
 - Tenor API has been shutdown, so I've replaced it with Klipy
+- For giphy, a gif is picked at random from the top ~50 search
+  results, so repeated searches give different gifs
+- Set `max_gif_size_mb` in the config to skip gifs bigger than a
+  given size in megabytes (0 = no limit). The limit only applies
+  when `response_type` is `upload`; if no match fits, the bot
+  sends a link instead

@@ -5,7 +5,8 @@ klipy_api_key: API_KEY_HERE
 provider: klipy
 # Number of results of the query in which the gif
 # is randomly chosen. Set 1 for the top result.
-# (klipy-only option)
+# (klipy-only option; giphy always samples from
+# the top ~50 search results)
 num_results: 1
 # Uncomment desired source for random gifs on giphy
 # can be either trending or random
@@ -21,3 +22,7 @@ response_type: message
 #   Klipy values: [high | medium | low | off]
 #   default values: 'g' for Giphy, 'off' for klipy
 rating: off
+# Maximum gif size in megabytes; only used when
+# response_type is upload. Oversized gifs are skipped
+# when picking, or a link is sent if none fit. 0 = no limit
+max_gif_size_mb: 20
